@@ -1,9 +1,15 @@
 
 let num1 = messageCharLength();
 let words=['pathos','forbearance','andragogy','dreamboat'];
-setTimeout(multiplyByFour,2000);
+let isBoolean=true;
 
+setTimeout(multiplyByFour,2000);
 getWords(words);
+countdown(20,done);
+
+orderFood();
+isBoolean = false;
+orderFood();
 
 function messageCharLength(){
     let message = "This is a message";
@@ -37,3 +43,30 @@ function countdown(num,callback){
 function done(){
     console.log('done');
 }
+
+function orderingChickenSandwich (){
+   return  new Promise((resolve,reject) => {
+    if(isBoolean == true){
+        let food = {
+            sandwich:'chicken',
+            veggies:'lettuce',
+        };
+        resolve(food);
+    } else {
+        let er = new Error('Not Chicken Sandwitch');
+        reject(er);
+    }
+});
+
+};
+
+function orderFood(){
+    orderingChickenSandwich()
+    .then((result) => {
+return console.log(result);
+}).catch((er) => {
+    return console.log(er);
+});
+    
+}
+
