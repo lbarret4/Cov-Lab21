@@ -1,4 +1,4 @@
-#Asynchronous Code Drills
+# Asynchronous Code Drills
 ## Objective
     Practice Asynchronous JavaScript concepts discussed in the video lecture
 
@@ -37,7 +37,7 @@ JavaScript programs are executed in chunks. Chunks that execute now and others t
     - sandwich : chicken
     - veggies: lettuce
 5. Resolve the object
-6. If the global variable is false, create a variable and set it equal to a new Error. ([hint])(https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error)
+6. If the global variable is false, create a variable and set it equal to a new Error. ([hint](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error))
 7. Reject this new variable
 8. Create a new function named orderFood that will call the promise you made and console log the result if the promise is fulfilled or if it is rejected
 9. Call the orderFood function and test each outcome
