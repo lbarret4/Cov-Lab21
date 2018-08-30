@@ -1,15 +1,32 @@
 
+//Initialize global variables 
 let num1 = messageCharLength();
 let words=['pathos','forbearance','andragogy','dreamboat'];
 let isBoolean=true;
 
+//Async:Now or LLater 
 setTimeout(multiplyByFour,2000);
+
+//Callbacks 
 getWords(words);
 countdown(20,done);
 
+//Promises 
 orderFood();
 isBoolean = false;
 orderFood();
+
+//Chaining Promises 
+doNumberOne()
+        .then((result) => {
+            return result*2;
+        }).then((result) => {
+            return result*4;
+    }).then((result) => {
+            return console.log(result*6);
+    }) ;
+
+
 
 function messageCharLength(){
     let message = "This is a message";
@@ -68,5 +85,10 @@ return console.log(result);
     return console.log(er);
 });
     
+}
+
+
+function doNumberOne(){
+    return new Promise(resolve=> setTimeout(resolve(1),2000));
 }
 
